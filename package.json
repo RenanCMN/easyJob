@@ -1,0 +1,34 @@
+{
+  "name": "easyjob",
+  "version": "1.0.0",
+  "description": "Projeto de um aplicativo para interacao de empresa e candidato a fins de facilitar a contracao e a agilidade no processo agilizar/facilitar o processo de contratacao, alem de prover um ambiente diferente aos usuarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectoEasyJob/easyJob.git"
+  },
+  "keywords": [
+    "easyjob",
+    "empregos",
+    "app",
+    "empresa",
+    "candidato"
+  ],
+  "author": "EasyJob",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProjectoEasyJob/easyJob/issues"
+  },
+  "homepage": "https://github.com/ProjectoEasyJob/easyJob#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0",
+    "sweetalert": "^2.0.8"
+  }
+}

@@ -1,0 +1,56 @@
+Como iniciar o projeto:
+
+Certifique-se de ter instalado o GIT e o NODE.JS
+
+Entre no terminal do git.bash
+Para acessa-lo, baixe o GIT e instale-o.
+Após feito isso, clique com o botão direito na área de trabalho e clique em 
+git bash
+
+Isso abrirá o terminal do git
+
+
+Primeiramente vamos clonar o projeto do github
+
+Execute o comando:
+
+git clone https://github.com/ProjectoEasyJob/easyjob.git
+
+Isso irá criar uma pasta com os arquivos do projeto na sua area de trabalho
+acesse com o comando:
+
+cd easyjob
+
+após isso para instalar todos os módulos faça:
+
+npm install
+
+
+
+/*----------------------------------------------------------------*/
+/*-------------------ENVIANDO ALTERACOES--------------------------*/
+/*----------------------------------------------------------------*/
+
+Para enviar as alteracoes para o projeto, utilize:
+
+O comando abaixo adiciona todos os arquivos alterado 
+no projeto de sua maquina.
+
+git add .
+
+O comando abaixo adiciona o arquivo especifico.
+git add nomedoarquivo
+
+Apos fazer a adicao, sera necessario fazer o commit, utilize:
+
+git commit -m "Entre as aspas, descreva a alteracao feita"
+
+Por final, envie as alteracoes para o projeto:
+
+git push origin master
+
+
+
+
+
+
