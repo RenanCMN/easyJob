@@ -1,0 +1,31 @@
+.navbarbg {}
+
+.nav-link {
+  color: #3498db;
+}
+
+.navbar-wrapper {
+  border: 2px solid #3498db;
+}
+
+.form-control {}
+
+.dropdown-menu {
+  width: 300px !important
+}
+
+.botaologin {
+  width: 100%;
+}
+
+.linksmenulogin {
+  margin-bottom: 1rem;
+}
+
+.dropdownlogin {
+  border: 2px solid #3498db;
+}
+
+.dropdownlogin::after {
+  content: none
+}
