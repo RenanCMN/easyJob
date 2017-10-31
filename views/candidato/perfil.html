@@ -1,28 +1,39 @@
 <form>
   <div class="row">
-    <div class="col-4">
+    <div class="col-md-4">
       <input type="text" class="form-control" placeholder="CEP" id="cep" ng-model="cep">
     </div>
-    <div class="col-2">
+    <div class="col-md-2">
       <button class="btn btn-default" ng-click="buscaCep(cep)">
         Buscar
       </button>
     </div>
   </div>
   <div class="row">
-    <div class="col-6">
-      <input type="text" class="form-control" placeholder="Logradouro" id="logradouro">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Logradouro" ng-model="logradouro">
     </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Número" id="numero">
+    <div class="col-md-3">
+      <input type="text" class="form-control" placeholder="Número" ng-model="numero">
     </div>
   </div>
   <div class="row">
-    <div class="col-8">
-      <input type="text" class="form-control" placeholder="Bairro" id="bairro">
+    <div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Bairro" ng-model="bairro">
     </div>
-    <div class="col-4">
-      <input type="text" class="form-control" placeholder="Complemento" id="complemento">
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <input type="text" class="form-control" placeholder="Complemento" ng-model="complemento">
     </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" placeholder="Cidade" ng-model="cidade">
+    </div>
+    <div class="col-md-2">
+      <input type="text" class="form-control" placeholder="Estado" ng-model="uf">
+    </div>
+  </div>
+  <div class="row">
+      <button class="col-md-offset-3 col-md-6 btn btn-outline btn-success" ng-click="saveProfile()">Atualizar</button>
   </div>
 </form>

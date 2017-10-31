@@ -1,13 +1,14 @@
 app.service('PerfilService', function($http){
 
   this.httpGet = function(url){
-    $http({
-      method : "GET",
-      url : url
-    }).then(function mySuccess(response) {
-      console.log(response.data);
-      console.log(response);
+    return $http({
+        method : "GET",
+        url : url
+    }).then(function(response) {
+      return response.data;
+    }).catch(function(response){
+      return response;
     });
-
   }
+
 });
