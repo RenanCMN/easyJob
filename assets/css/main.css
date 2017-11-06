@@ -1,31 +1,23 @@
-.navbarbg {}
-
-.nav-link {
-  color: #3498db;
+.circle-logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: red;
 }
 
-.navbar-wrapper {
-  border: 2px solid #3498db;
+.azul{
+  background-color: rgba(52, 152, 219, 0.5);
+}
+.txt-white{
+  color: #ffffff;
 }
 
-.form-control {}
-
-.dropdown-menu {
-  width: 300px !important
+.item-active-menu{
+  border-radius: 5px;
+  border: 1px #ffffff solid;
 }
 
-.botaologin {
-  width: 100%;
-}
-
-.linksmenulogin {
-  margin-bottom: 1rem;
-}
-
-.dropdownlogin {
-  border: 2px solid #3498db;
-}
-
-.dropdownlogin::after {
-  content: none
+.bg-img-wallpaper{
+  background-image: url('../images/easyjob-wallpaper.jpg');
+  background-size: cover;
 }
