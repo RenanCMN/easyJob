@@ -1,1 +1,0 @@
-aqui vao os scripts jquery e js que nao sao angularjs
