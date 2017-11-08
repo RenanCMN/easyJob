@@ -28,5 +28,4 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
   $scope.loginUser = function(){
     AlertService.loadingModal();
   }
-
 });
