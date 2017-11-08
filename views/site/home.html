@@ -1,40 +1,101 @@
-<!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">EasyJob</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar fixed-top navbar-toggleable-sm bg-faded">
+  <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <span> </span>
+      <span> </span>
+      <span> </span>
+  </button>
+  <a class="navbar-brand" href="#">
+      EasyJob <i class="hidden-sm-down fa fa-star-o"></i>
+  </a>
+  <div class="collapse navbar-collapse" id="collapsingNavbar">
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link btn-login" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+          </li>
+      </ul>
+  </div>
+</nav>
 
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">Bem-Vindo ao EasyJob</div>
-          <div class="intro-heading">O lugar perfeito para você encontrar seu emprego/funcionário</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-        </div>
+<!-- Cadastro Modal -->
+<div class="modal fade" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="col-11 modal-title text-center">Login</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-    </header>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="">
+          <div class="form-group">
+            <label for="usuario">Usuário</label>
+            <input type="email" class="form-control" id="usuario" placeholder="Digite o seu usuário...">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Digite sua senha...">
+            <small id="passwordHelp" class="form-text text-muted">Dica: Nunca compartilhe sua senha.</small>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Mantenha-me conectado!
+            </label>
+          </div>
+          <br><br>
+          <button type="submit" class="btn btn-block btn-primary">ENTRAR</button>
+          <br><br>
+          <div class="form-group text-center">
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cadastroModal">Cadastrar-me</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cadastro Modal -->
+<div class="modal fade" id="cadastroModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="col-11 modal-title text-center">Novo Usuário</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form ng-controller="SiteController">
+          <div class="form-group">
+            <label for="usuario">Nome Completo</label>
+            <input type="text" class="form-control" placeholder="Nome completo" required ng-model="pessoa.nome">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="form-control" placeholder="E-mail" required ng-model="pessoa.email">
+          </div>
+          <div class="form-group">
+            <span for="usuario">Usuário</span>
+            <input type="text" id="usuario" class="form-control" placeholder="Usuário" required ng-model="pessoa.usuario">
+          </div>
+          <div class="form-group">
+            <span for="pw">Senha</span>
+            <input type="password" id="pw" class="form-control" placeholder="Senha" required ng-model="pessoa.senha">
+          </div>
+          <div class="form-group">
+            <span for="confirmPw">Repita a senha</span>
+            <input type="password" id="confirmPw" class="form-control" placeholder="Confirma Senha" required ng-model="pessoa.confirmaSenha">
+          </div>
+          <button type="submit" class="btn btn-block btn-success" ng-click="cadastrarUsuario()">Cadastrar-se</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

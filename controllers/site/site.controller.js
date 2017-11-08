@@ -26,8 +26,7 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
   };
 
   $scope.loginUser = function(){
-    let params = $scope.login;
-    console.log(params);
-  };
+    AlertService.loadingModal();
+  }
 
 });
