@@ -48,7 +48,8 @@ app.service('AlertService', function(){
   };
 
   this.loadingModal = function(){
-    swal({title: 'Aguarde...'});
+    swal({title: 'Aguarde...'}).catch(swal.noop);
     swal.showLoading();
   };
+
 });
