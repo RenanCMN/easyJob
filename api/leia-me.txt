@@ -1,0 +1,28 @@
+Tenha um servidor apache/mysql rodando em sua maquina
+caso queira trabalhar em urlLocalHost
+
+Caso nao tenha baixe e instale o XAMPP
+
+Cria a pasta easyjob
+Coloque da pasta api com seus arquivos dentro da pasta criada (easyjob)
+
+Mova a pasta easyjob para C:\xampp\htdocs caso esteja utilizando xampp.
+
+Inicie o apache e mysql
+
+Dentro da pasta do api, contém a past DATABASE, e dentro contém o arquivo easyjob.sql
+Execute-o no MySql, para criar o banco.
+
+Para mexer no projeto AngularJS/html/css/js
+
+Baixe o GIT e instale-o
+Baixo o NodeJS e instale-o
+
+Abra o terminal do GIT
+Execute o seguinte comando: npm install -g live-server
+
+Pelo terminal do git acesse a pasta do projeto easyjob (a pasta que contém os arquivo html/js e não os php)
+
+Execute o comando no terminal do git: live-server
+
+Começe a criar!!!

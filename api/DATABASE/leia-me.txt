@@ -1,0 +1,3 @@
+O arquivo easyjob.sql é o script do banco.
+
+O arquivo easyjob-api.mvb é o DER(Diagrama do Banco).
