@@ -1,8 +1,9 @@
 app.service('SiteService', function($http){
-  this.insertUser = function(url, params){
+
+  this.insertUser = function(params){
     return $http({
         method: "POST",
-        url : url,
+        url : config.urlLocalHost,
         data: data,
         headers:{'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}
     }).then(function(response) {
@@ -11,10 +12,10 @@ app.service('SiteService', function($http){
       return response;
     });
   },
-  this.login = function(url, params){
+  this.login = function(params){
     return $http({
       method: "POST",
-      url: url,
+      url: config.urlLocalHost,
       data: data,
       headers:{'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}
     }).then(function(response){

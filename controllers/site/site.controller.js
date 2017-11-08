@@ -4,7 +4,7 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
     if(params.usuario != params.senha){
       if (params.senha.length >= 6) {
         if(params.senha === params.confirmaSenha){
-          SiteService.insertUser('http://localhost/easyjob/api/site/cadastro.php', params)
+          SiteService.insertUser(params)
           .then(function(res){
             console.log(res);
             let html = res.MESSAGE;
