@@ -47,9 +47,11 @@ app.service('AlertService', function(){
     }).catch(swal.noop); //swal.noop retira erro de promise do log do navegador
   };
 
-  this.loadingModal = function(){
+  this.loadingShow = function(){
     swal({title: 'Aguarde...'}).catch(swal.noop);
     swal.showLoading();
   };
-
+  this.loadingClose = function(){
+    swal.enableLoading();
+  };
 });
