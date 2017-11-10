@@ -4,19 +4,19 @@
       <span> </span>
       <span> </span>
   </button>
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="">
       EasyJob <i class="hidden-sm-down fa fa-star-o"></i>
   </a>
   <div class="collapse navbar-collapse" id="collapsingNavbar">
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
           <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+              <a class="nav-link" href="">Sobre</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
+              <a class="nav-link" href="">Contato</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link btn-login" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+              <a class="nav-link btn-login" href="" data-toggle="modal" data-target="#loginModal">Login</a>
           </li>
       </ul>
   </div>
@@ -33,24 +33,24 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body">
-        <form class="">
+        <form class="" ng-controller="SiteController">
           <div class="form-group">
             <label for="usuario">Usuário</label>
-            <input type="email" class="form-control" id="usuario" placeholder="Digite o seu usuário...">
+            <input type="text" class="form-control" id="usuario" placeholder="Digite o seu usuário..." ng-model="login.user" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Digite sua senha...">
+            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Digite sua senha..." ng-model="login.password" required>
             <small id="passwordHelp" class="form-text text-muted">Dica: Nunca compartilhe sua senha.</small>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">
+              <input type="checkbox" class="form-check-input" ng-model="login.autoLogin">
               Mantenha-me conectado!
             </label>
           </div>
           <br><br>
-          <button type="submit" class="btn btn-block btn-primary">ENTRAR</button>
+          <button type="submit" class="btn btn-block btn-primary" ng-click="loginUser()">ENTRAR</button>
           <br><br>
           <div class="form-group text-center">
             <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cadastroModal">Cadastrar-me</button>
@@ -80,6 +80,12 @@
           <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" id="email" class="form-control" placeholder="E-mail" required ng-model="pessoa.email">
+          </div>
+          <div class="form-group">
+            <label for="candidato">Candidato</label>
+            <input type="radio" id="candidato" checked="checked" ng-model="pessoa.tipo" value="1">
+            <label for="empresa">Empresa</label>
+            <input type="radio" id="empresa" ng-model="pessoa.tipo" value="2">
           </div>
           <div class="form-group">
             <span for="usuario">Usuário</span>

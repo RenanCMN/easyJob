@@ -6,7 +6,6 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
         if(params.senha === params.confirmaSenha){
           SiteService.insertUser(params)
           .then(function(res){
-            console.log(res);
             let html = res.MESSAGE;
             if(res.STATUS){
               AlertService.successModal(html);
@@ -26,6 +25,9 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
   };
 
   $scope.loginUser = function(){
-    AlertService.loadingModal();
+    SiteService.login($scope.login)
+    .then(function(response){
+      console.log(response);
+    });
   }
 });

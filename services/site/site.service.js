@@ -1,10 +1,9 @@
 app.service('SiteService', function($http, CONFIG){
-
   this.insertUser = function(params){
     return $http({
         method: "POST",
-        url : CONFIG.urlLocalHost,
-        data: data,
+        url : CONFIG.urlLocalHost+'site/cadastro.php',
+        data: params,
         headers:{'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}
     }).then(function(response) {
       return response.data;
@@ -15,8 +14,8 @@ app.service('SiteService', function($http, CONFIG){
   this.login = function(params){
     return $http({
       method: "POST",
-      url: CONFIG.urlLocalHost,
-      data: data,
+      url: CONFIG.urlLocalHost+'site/login.php',
+      data: params,
       headers:{'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}
     }).then(function(response){
       return response.data;
