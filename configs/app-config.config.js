@@ -1,4 +1,4 @@
-var app = angular.module('easyjobWeb', ['ngRoute', 'ngAnimate'])
+var app = angular.module('easyjobWeb', ['ngAnimate', 'ui.router'])
 .constant('CONFIG',{
   AppName: "EasyJob",
   urlWebService: 'http://easyjob.luingry.com.br/api/',

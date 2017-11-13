@@ -27,7 +27,9 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
   $scope.loginUser = function(){
     SiteService.login($scope.login)
     .then(function(response){
-      console.log(response);
+      let dados = response.AUTOLOGIN.split("&");
+      let decode = window.atob(dados[0]);
+      console.log(decode);
     });
   }
 });
