@@ -27,9 +27,16 @@ app.controller('SiteController', function($scope, SiteService, AlertService){
   $scope.loginUser = function(){
     SiteService.login($scope.login)
     .then(function(response){
-      let dados = response.AUTOLOGIN.split("&");
-      let decode = window.atob(dados[0]);
-      console.log(decode);
+      console.log(response);
+      if(response.STATUS){
+        if(response.AUTO){
+          localStorage.setItem('AUTO', response.AUTO);
+          localStorage.setItem('AUTOLOGIN', response.AUTOLOGIN);
+        }
+      }else {
+        AlertService.errorModal(response.MESSAGE);
+      }
+
     });
   }
 });
