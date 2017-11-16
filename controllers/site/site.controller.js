@@ -1,5 +1,7 @@
 app.controller('SiteController', function($scope, $state, SiteService, AutenticacaoService, AlertService){
-
+  if(!(localStorage.getItem('AUTO'))){
+    localStorage.clear();
+  }
   //LOGIN AUTOMATICO, caso tenha marcado a opção de 'Mantenha-me conectado'
   AutenticacaoService.autoLogin();
 

@@ -74,7 +74,8 @@ app.service('AutenticacaoService', function($http, $location, $state, CONFIG, Al
       return response.data;
     })
     .catch(function(error){
-      console.log(error);
+      $state.go('/');
+      AlertService.errorModal('Faça o login, por gentileza... :)')
     });
   }
 
