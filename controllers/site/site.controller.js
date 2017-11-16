@@ -12,9 +12,32 @@ app.controller('SiteController', function($scope, $state, SiteService, Autentica
         if(params.senha === params.confirmaSenha){
           SiteService.insertUser(params)
             .then(function(res){
+
               let html = res.MESSAGE;
+
               if(res.STATUS){
+
                 AlertService.successModal(html);
+
+                setTimeout(function(){
+
+                  AlertService.loadingShow('Aguarde... Estou te redirecionando...');
+
+                  setTimeout(function(){
+
+                    let login = {
+                      user : res.USER,
+                      password : res.PASSWORD,
+                      autoLogin : true //default após cadastro é ter o login AUTOMATICO
+                    };
+                    console.log(login);
+                    AutenticacaoService.login(login);
+                    AlertService.loadingClose();
+
+                  }, 3000);
+
+                }, 3000);
+
               }else{
                 AlertService.errorModal(html);
               }
@@ -31,30 +54,7 @@ app.controller('SiteController', function($scope, $state, SiteService, Autentica
   };
 
   $scope.loginUser = function(){
-    AutenticacaoService.login($scope.login)
-      .then(function(response){
-        $(".modal-backdrop").remove(); //esconde a modal login
-        if(response.STATUS){
-
-          localStorage.setItem('TOKEN', response.TOKEN); //set hash on localStorage
-
-          if(response.AUTO){
-            localStorage.setItem('AUTO', response.AUTO);
-          }
-
-          if (response.TIPOUSUARIO == "1") {
-            $state.go('menu.candidatoHome');
-          }else if(response.TIPOUSUARIO == "2"){
-            $state.go('menu.empresaHome');
-          }else{
-            $state.go('/');
-          }
-
-        }else {
-          AlertService.errorModal(response.MESSAGE);
-        }
-
-    });
+    AutenticacaoService.login($scope.login);
   }
 
 });

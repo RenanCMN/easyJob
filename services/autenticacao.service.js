@@ -7,7 +7,28 @@ app.service('AutenticacaoService', function($http, $location, $state, CONFIG, Al
       data: params,
       headers:CONFIG.headers,
     }).then(function(response){
-      return response.data;
+      console.log(response.data);
+      $(".modal-backdrop").remove(); //esconde a modal login
+
+      if(response.data.STATUS){
+
+        localStorage.setItem('TOKEN', response.data.TOKEN); //set hash on localStorage
+
+        if(response.data.AUTO){
+          localStorage.setItem('AUTO', response.data.AUTO);
+        }
+
+        if (response.data.TIPOUSUARIO == "1") {
+          $state.go('menu.candidatoHome');
+        }else if(response.data.TIPOUSUARIO == "2"){
+          $state.go('menu.empresaHome');
+        }else{
+          $state.go('/');
+        }
+
+      }else {
+        AlertService.errorModal(response.data.MESSAGE);
+      }
     }).catch(function(response){
       return response;
     });
