@@ -22,7 +22,7 @@
   </div>
 </nav>
 
-<!-- Cadastro Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="loginModal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -33,7 +33,7 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body">
-        <form class="" ng-controller="SiteController">
+        <form class="" ng-submit="loginUser()">
           <div class="form-group">
             <label for="usuario">Usuário</label>
             <input type="text" class="form-control" id="usuario" placeholder="Digite o seu usuário..." ng-model="login.user" required>
@@ -50,7 +50,7 @@
             </label>
           </div>
           <br><br>
-          <button type="submit" class="btn btn-block btn-primary" ng-click="loginUser()">ENTRAR</button>
+          <button type="submit" class="btn btn-block btn-primary">ENTRAR</button>
           <br><br>
           <div class="form-group text-center">
             <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cadastroModal">Cadastrar-me</button>
@@ -72,7 +72,7 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body">
-        <form ng-controller="SiteController">
+        <form ng-submit="cadastrarUsuario()">
           <div class="form-group">
             <label for="usuario">Nome Completo</label>
             <input type="text" class="form-control" placeholder="Nome completo" required ng-model="pessoa.nome">
@@ -99,7 +99,7 @@
             <span for="confirmPw">Repita a senha</span>
             <input type="password" id="confirmPw" class="form-control" placeholder="Confirma Senha" required ng-model="pessoa.confirmaSenha">
           </div>
-          <button type="submit" class="btn btn-block btn-success" ng-click="cadastrarUsuario()">Cadastrar-se</button>
+          <button type="submit" class="btn btn-block btn-success">Cadastrar-se</button>
         </form>
       </div>
     </div>

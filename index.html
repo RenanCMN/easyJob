@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
   <head>
-    <meta charset="utf-8">
+
     <title>EasyJob</title>
 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
     <link rel="stylesheet" href="assets/css/ng-animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -18,32 +20,52 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="node_modules/angular/angular.min.js" charset="utf-8"></script>
-    <!-- <script src="node_modules/angular-route/angular-route.min.js" charset="utf-8"></script> -->
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
-    <script src="node_modules/angular-animate/angular-animate.min.js" charset="utf-8"></script>
-    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js" charset="utf-8"></script>
     <script src="assets/js/style.js" charset="utf-8"></script>
 
-    
+
 
     <!-- AngularJS Scripts -->
     <!-- Config -->
     <script src="configs/app-config.config.js" charset="utf-8"></script>
+
     <!-- Routes -->
     <script src="routes/main.route.js" charset="utf-8"></script>
+
     <!-- Services -->
     <script src="services/global-function.service.js" charset="utf-8"></script>
     <script src="services/alert.service.js" charset="utf-8"></script>
-    <script src="services/candidato/candidato.service.js" charset="utf-8"></script>
-    <script src="services/empresa/empresa.service.js" charset="utf-8"></script>
+    <script src="services/autenticacao.service.js" charset="utf-8"></script>
+    <!-- Site Services -->
     <script src="services/site/site.service.js" charset="utf-8"></script>
+    <script src="services/site/usuario.service.js" charset="utf-8"></script>
+    <!-- Candidato Services -->
+    <script src="services/candidato/candidato.service.js" charset="utf-8"></script>
+    <!-- Empresa Services -->
+    <script src="services/empresa/empresa.service.js" charset="utf-8"></script>
+
     <!-- Controllers -->
+    <!-- Site Controllers -->
     <script src="controllers/site/site.controller.js" charset="utf-8"></script>
-    <script src="controllers/candidato/candidato.controller.js" charset="utf-8"></script>
-    <script src="controllers/empresa/empresa.controller.js" charset="utf-8"></script>
+    <script src="controllers/site/menu.controller.js" charset="utf-8"></script>
+    <script src="controllers/site/home.controller.js" charset="utf-8"></script>
+    <script src="controllers/site/combinacoes.controller.js" charset="utf-8"></script>
+    <!-- Candidato Controllers -->
+    <script src="controllers/candidato/perfil.controller.js" charset="utf-8"></script>
+    <script src="controllers/candidato/curriculo.controller.js" charset="utf-8"></script>
+    <script src="controllers/candidato/vagas.controller.js" charset="utf-8"></script>
+    <!-- Empresa Controllers -->
+    <script src="controllers/empresa/perfil.controller.js" charset="utf-8"></script>
+    <script src="controllers/empresa/curriculo.controller.js" charset="utf-8"></script>
+    <script src="controllers/empresa/ofertar-vaga.controller.js" charset="utf-8"></script>
+
   </head>
+
   <body ng-app="easyjobWeb">
-    <div class="container-fluid {{animation}}" ui-view></div>
+    <div class="container-fluid {{animation}}" ng-animate="'{{animation}}'" ui-view></div>
   </body>
+
 </html>

@@ -9,15 +9,15 @@
   </a>
   <div class="collapse navbar-collapse" id="collapsingNavbar">
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-          <li class="nav-item">
-              <a class="nav-link" href="">Perfil</a>
+          <li class="nav-item" ng-repeat="item in menu | orderBy: 'ORDEMMENU'">
+              <a class="nav-link" ui-sref="{{item.STATE}}" data-toggle="tooltip" data-placement="bottom" title="{{item.DESCRICAO}}">{{item.LINK}}</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link btn-login" href="">Sair</a>
+              <a class="nav-link btn-login">Sair</a>
           </li>
       </ul>
   </div>
 </nav>
-<div ui-view>
 
-</div>
+<!-- Carrega as vies dos usuários -->
+<div ui-view></div>

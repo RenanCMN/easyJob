@@ -1,4 +1,4 @@
-app.service('CandidatoService', function($http, CONFIG){
+app.service('UsuarioService', function($http, CONFIG){
   /*
 
     crie as requisições para o php aqui
