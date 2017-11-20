@@ -1,11 +1,13 @@
 .container-fluid{
   padding: 0px !important;
 }
-
+.navbar .container {
+  position: initial;
+}
 
 body {
-    padding-top: 70px;
     font-family: 'Lato',sans-serif;
+    
 }
 /*-- Menu responsive --*/
 .navbar{
@@ -13,6 +15,13 @@ body {
 }
 .nav-link{
   color: rgb(255, 255, 255);
+  padding: 5px 0;
+}
+.nav-link span{
+  padding: 0 20px;
+}
+.nav-item{
+  text-align: center
 }
 .navbar-brand{
   color: rgb(252, 252, 252);
@@ -23,9 +32,10 @@ body {
     outline: 0;
 }
 
+
 .navbar-toggler span {
    display: block;
-   background-color: #444;
+   background-color: #ffffff;
    height: 3px;
    width: 25px;
    margin-top: 4px;
