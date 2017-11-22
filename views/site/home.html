@@ -14,7 +14,7 @@
               <a class="nav-link" href="#quem-somos"><span style="padding: 0">Quem somos</span></a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href=""><span>Contato</span></a>
+              <a class="nav-link" href="#contato"><span>Contato</span></a>
           </li>
           <li class="nav-item">
               <a class="nav-link btn-login" href="" data-toggle="modal" data-target="#loginModal"><span>Login</span></a>
@@ -31,10 +31,10 @@
       <h1>
         <p class="text-center align-middle">Procurando por trabalho ou colaboradores?</p>
       </h1>
-      <p class="text-center">Encontrou o sistema perfeito para você!</p>
+      <p class="text-center">Acaba de encontrar o sistema perfeito para você!</p>
       </span>
     </div>
-    <img class="banner-img" src="https://luingry.com.br/easyjob/img/easyjob-wallpaper.jpg" >
+    <img class="banner-img" src="https://luingry.com.br/easyjob/img/city.jpg" >
 </div>
 
 <!-- Conteudo -->
@@ -69,37 +69,88 @@
     </div>
   </div>
   <hr>
-  <div class="quem-somos py-5 row">
+  <div id="quem-somos" class="quem-somos py-5 row">
     <div class="col-md-6 align-self-center">
       <img class="rounded img-entrevista" src="https://luingry.com.br/easyjob/img/entrevista.jpg">
     </div>
     <div class="col-md-6 align-self-center text-center text-md-left">
     <h3 class="pb-2 pt-3 pt-md-0">Um moderno sistema de busca de empregos e colaboradores</h3>
-    <span>O EasyJob nasceu a partir da dificuldade de encontrar empregos e candidatos que foi identificada no mercado de trabalho. A partir de um profundo estudo, coletamos dados e identificamos as necessidades e fraquezas nos sistemas de busca de empregos existentes. Visando facilitar o encontro entre empresas e candidatos, criamos então o EasyJob. Atuando de forma intuitiva e rápida, nossos usuários conseguem encontrar o que querem em poucos minutos sem sair de suas casas ou empresas.</span>
+    <span class="text-quem-somos"><p class=" text-justify">O EasyJob nasceu a partir da dificuldade de encontrar empregos e candidatos que foi identificada no mercado de trabalho. A partir de um profundo estudo, coletamos dados e identificamos as necessidades e fraquezas nos sistemas de busca de empregos existentes. Visando facilitar o encontro entre empresas e candidatos, criamos então o EasyJob. Atuando de forma intuitiva e rápida, nossos usuários conseguem encontrar o que querem em poucos minutos sem sair de suas casas ou empresas.</p></span>
     </div>
   </div>
 </div>
-
+<!--linha rodape-->
+<div class="footer-line"></div>
+<div class="footer-line2"></div>
 <!-- Rodapé -->
 <footer>
   <div class="container">
     <div class="row rodape">
-      <div class=" col-md-6 pt-5 pb-5">
-        <div>
-          <div class="col-12"><a class="" href="" data-toggle="modal" data-target="#loginModal"><span>Começe a usar agora!</span></a></div>
-          <div class="col-12">Quem somos</div>
-          <div class="col-12">E-mail: contato@easyjob.com.br</div>
+      <div class=" col-md-6 pt-md-5 pt-3 pb-md-5 pb-0 d-md-flex">
+      <div class="text-md-left text-center col-md-5 col-12">
+        <span class=" links-uteis">Links uteis</span>
+        <ul class="link-list pt-2 list-unstyled">
+          <li><span class="links-item"><a href="#">Inicio</a></span></li>
+          <li><span class="links-item"><a href="" data-toggle="modal" data-target="#loginModal">Acessar</a></span></li>
+          <li><span class="links-item"><a href="#">Quem somos</a></span></li>
+          <li><span class="links-item"><a href="#">Vantagens</a></span></li>
+        </ul>
+      </div>
+      <div class="text-md-left text-center col-md-7 col-12  pb-md-0 mb-3">
+        <span class=" links-uteis"><p class="text-center">Redes Sociais</p></span>
+        <div class="social-link-list pt-3 ">
+          <ul class="list-unstyled text-center list-inline d-flex justify-content-between">
+            <li class="list-inline-item">
+              <a href="#" class="unstyle-link">
+              <ul class="list-unstyled text-center">
+                <li>
+                  <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                </li>
+                <li>
+                  <span class="links-item">Facebook</span>
+                </li>
+              </ul>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="unstyle-link">
+              <ul class="list-unstyled text-center">
+                <li>
+                  <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                </li>
+                <li>
+                  <span class="links-item">LinekdIn</span>
+                </li>
+              </ul>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="unstyle-link">
+              <ul class="list-unstyled text-center">
+                <li>
+                  <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                </li>
+                <li>
+                  <span class="links-item">Twitter</span>
+                </li>                  
+              </ul>
+            </a>
+            </li>            
+          </ul>
         </div>
       </div>
-      <div class="col-md-6 pt-5 pb-5">
-        <div>
-          <div class="col-12">Redes sociais:</div>
-          <div class="col-12">Nos envie uma mensagem:</div>
-          <form>
-            <input class="" type="text" name="mensagem">
-            <button type="submit">Enviar</button>
+    </div>
+      <div class="col-md-6 pt-md-5 pt-0 pb-5">
+        <div>          
+          <form id="contato">
+            <div class="form-group">
+              <span class="helper-contato"><p class="text-center text-md-left mb-0 mb-md-3">Nos envie uma mensagem. Gostamos de conversar :p</p></span>
+              <textarea class="form-control" id="exampleTextarea" placeholder="Digite sua mensagem aqui" rows="3"></textarea>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Informe seu e-mail para retornarmos o contato">
+              <small id="email" class="form-text text-muted "><span class="info-seguranca-email">Não se preocupe. Não usaremos seu e-mail para spam ;)</span></small>
+            </div>  
+            <button type="submit" class="btn btn-primary bg-inverse col-12 col-md-3">Enviar</button>
           </form>
-
         </div>
       </div>
     </div>

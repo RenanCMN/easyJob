@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .container-fluid{
   padding: 0px !important;
 }
@@ -5,8 +8,8 @@
   position: initial;
 }
 
-body {
-    font-family: 'Lato',sans-serif;
+body, div, a, ul, li, span, p {
+    font-family: 'Roboto', sans-serif;
 }
 
 .container-banner{
@@ -22,9 +25,9 @@ body {
 }
 .banner-img{
   position: absolute;
-  top:0;
+  top:-200px;
   z-index: 1;
-  filter: grayscale(100%);
+  filter: brightness(30%); blur(5px);
 }
 .card{
   min-height: 300px;
@@ -64,11 +67,67 @@ footer{
 .navbar-toggler:active {
     outline: 0;
 }
+
+.helper-contato{
+  font-size: 1.2em;
+}
+.links-uteis{
+  font-size: 1.2em;
+
+}
+.info-seguranca-email{
+  color: rgba(255, 255, 255, 0.45);
+}
+.links-item{
+  text-decoration: none;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.link-list li{
+  margin-left: 8px;
+}
+.links-item a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.links-item a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+.unstyle-link{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.unstyle-link:hover{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+.footer-line{
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.footer-line2{
+  height: 3px;
+  background-color: rgba(41, 128, 185, 0.9);
+}
+
+/*Responsividade*/
+@media (max-width: 767px){
+  .text-quem-somos{
+    text-align-last: center;
+}
+}
+@media (max-width: 991px){
+  .banner-text{
+    width: auto;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar-collapse{
-      width: 35%;
+    width: 35%;
     margin: auto;
 }
+
 }
 @media (min-width: 768px) and (max-width: 991px){ 
 .card {
